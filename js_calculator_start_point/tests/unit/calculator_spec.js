@@ -11,38 +11,41 @@ describe('calculator', function () {
     calculator.previousTotal = "4"
     calculator.add("1")
     // Function is returning result as a float
-    assert.equal(5, calculator.runningTotal)
+    assert.equal(calculator.runningTotal, 5)
   });
 
   it('it can subtract two numbers', function(){
     calculator.previousTotal = "7"
     calculator.subtract("4")
-    assert.equal(3, calculator.runningTotal)
+    assert.equal(calculator.runningTotal, 3)
   });
 
   it('it can multiply two numbers', function(){
     calculator.previousTotal = "3"
     calculator.multiply("5")
-    assert.equal(15, calculator.runningTotal)
+    assert.equal(calculator.runningTotal, 15)
   });
 
   it('it can divide two numbers', function(){
     calculator.previousTotal = "21"
     calculator.divide("7")
-    assert.equal(3, calculator.runningTotal)
+    assert.equal(calculator.runningTotal, 3)
   });
 
   it('it can concatenate multiple number button clicks', function(){
     calculator.numberClick("1")
     calculator.numberClick("2")
     calculator.numberClick("3")
-    assert.equal(123, calculator.runningTotal)
+    assert.equal(calculator.runningTotal, 123)
   });
 
-  // it('', function(){
-  //
-  //   assert.equal(true, true)
-  // });
+  it('it can chain multiple operations together', function(){
+    calculator.previousOperator = '+'
+    calculator.previousTotal = "10"
+    calculator.runningTotal = "10"
+    calculator.operatorClick("+")
+    assert.equal(calculator.previousTotal, 20)
+  });
 
   // it('', function(){
   //

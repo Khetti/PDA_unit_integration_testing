@@ -32,10 +32,12 @@ describe('calculator', function () {
     assert.equal(3, calculator.runningTotal)
   });
 
-  // it('', function(){
-  //
-  //   assert.equal(true, true)
-  // });
+  it('it can concatenate multiple number button clicks', function(){
+    calculator.numberClick("1")
+    calculator.numberClick("2")
+    calculator.numberClick("3")
+    assert.equal(123, calculator.runningTotal)
+  });
 
   // it('', function(){
   //

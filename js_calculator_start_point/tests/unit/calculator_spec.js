@@ -12,6 +12,36 @@ describe('calculator', function () {
     calculator.add("1")
     // Function is returning result as a float
     assert.equal(5, calculator.runningTotal)
-  })
+  });
+
+  it('', function(){
+
+    assert.equal(true, true)
+  });
+
+  // it('', function(){
+  //
+  //   assert.equal(true, true)
+  // });
+
+  // it('', function(){
+  //
+  //   assert.equal(true, true)
+  // });
+
+  // it('', function(){
+  //
+  //   assert.equal(true, true)
+  // });
+
+  // it('', function(){
+  //
+  //   assert.equal(true, true)
+  // });
+
+  // it('', function(){
+  //
+  //   assert.equal(true, true)
+  // });
 
 });

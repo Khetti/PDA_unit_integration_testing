@@ -20,10 +20,11 @@ describe('calculator', function () {
     assert.equal(3, calculator.runningTotal)
   });
 
-  // it('', function(){
-  //
-  //   assert.equal(true, true)
-  // });
+  it('it can multiply two numbers', function(){
+    calculator.previousTotal = "3"
+    calculator.multiply("5")
+    assert.equal(15, calculator.runningTotal)
+  });
 
   // it('', function(){
   //

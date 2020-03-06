@@ -52,6 +52,9 @@ Calculator.prototype.operatorClick = function(operator){
       this.multiply(this.runningTotal);
       break;
       case ('/'):
+      if (this.runningTotal == 0){
+        return 0
+      }
       this.divide(this.runningTotal);
       break;
     }
